@@ -1,6 +1,6 @@
  <?php
 
- namespace App\Models;
+ namespace App;
  use Cviebrock\EloquentSluggable\Sluggable;
  use Illuminate\Database\Eloquent\Model;
  class Post extends Model{
@@ -19,6 +19,9 @@
                 'onUpadate' => true
             ]
         ];
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }
 

@@ -1,6 +1,6 @@
  <?php
 
- namespace App;
+ namespace App\Models;
  use Cviebrock\EloquentSluggable\Sluggable;
  use Illuminate\Database\Eloquent\Model;
  class Post extends Model{
@@ -15,7 +15,8 @@
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'title',
+                'onUpadate' => true
             ]
         ];
     }
